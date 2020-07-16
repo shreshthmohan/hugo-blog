@@ -1,0 +1,6 @@
+[submodule "themes/hugo-tailwind-journal"]
+	path = themes/hugo-tailwind-journal
+	url = https://github.com/ianrodrigues/hugo-tailwind-journal.git
+[submodule "themes/minimalist"]
+	path = themes/minimalist
+	url = https://github.com/shreshthmohan/minimalist-hugo-tailwind.git
