@@ -1,0 +1,10 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Shreshth Mohan"
+theme = "minimalist"
+pygmentsUseClasses = true
+[params]
+  tagline = "I am a software developer from India."
+  avatar = "https://pbs.twimg.com/profile_images/1275268475934568450/G2esZFsI_400x400.jpg"
+[markup]
+  defaultMarkdownHandler = "blackfriday"

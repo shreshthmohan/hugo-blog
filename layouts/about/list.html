@@ -1,0 +1,35 @@
+{{ define "heading" }}
+<div class="pt-10 pb-24 mx-auto" style="max-width: 65ch;" >
+  <div class="text-center">
+  {{ if .Site.Params.Avatar }}
+  <img class="hidden md:block w-40 rounded-full mx-auto" src="{{ .Site.Params.Avatar | absURL }}"
+      alt="{{ .Site.Params.Author }}">
+  {{ end }}
+  <!-- Title and Publication Date -->
+  <h1 class="text-4xl text-gray-700">{{ .Title }}</h1>
+</div>
+  <time class="text-gray-600 "
+    datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">{{ .Date.Format "02 Jan 2006" }}</time>
+
+  <!-- Tags -->
+  {{ with .Params.tags }}
+  <ol class="mt-4">
+    {{ range . }}
+    <li class="inline-block">
+      <a class="border-none text-gray-800 text-xs bg-gray-400 hover:bg-gray-600 hover:text-white rounded-sm px-3 py-1"
+        href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a>
+    </li>
+    {{ end }}
+  </ol>
+  {{ end }}
+{{ end }}
+
+{{ define "content" }}
+<article class="mb-12 font-serif leading-relaxed">
+  
+  {{ .Content }}
+
+  {{ template "_internal/disqus.html" . }}
+</article>
+</div>
+{{ end }}
