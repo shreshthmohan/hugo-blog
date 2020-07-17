@@ -1,7 +1,8 @@
 ---
 title: "About"
-subtitle: "Lorem ipsum dolor, sit amet consectetur adipisicing elit"
 date: 2020-05-16T22:54:57+05:30
+altTitle: "Hi, I am Shreshth!"
+showAvatar: true
 draft: false
 ---
 
@@ -11,4 +12,4 @@ After being rejected by several Indian companies for not having enough experienc
 
 I started this blog as an attempt to record my learnings. I plan to write about a lot of topics apart from software.
 
-If you wish to talk to me about something, [tweet at me](https://twitter.com/shreshthmohan)
+If you wish to talk to me about something, <a class="underline" href="https://twitter.com/shreshthmohan">tweet at me</a>

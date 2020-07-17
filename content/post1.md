@@ -1,5 +1,5 @@
 ---
-title: "Lorem ipsum dolor sit"
+title: "Lorem ipsum dolor sit blah "
 subtitle: "Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit"
 date: 2020-07-13T20:11:33+05:30
 draft: false
@@ -9,7 +9,7 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo voluptatum quis, d
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta pariatur iste quas consectetur eligendi nostrum saepe nemo vel libero perspiciatis officiis impedit id voluptatem esse expedita, nesciunt earum! Architecto, ipsam.
 
-## test heading
+## Test heading
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
