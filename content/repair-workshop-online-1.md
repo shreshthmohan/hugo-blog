@@ -65,7 +65,7 @@ After we had walked through all of the broken items we talked about planned obso
 - A few people wanted us to organize the workshop for kids, mostly teenagers. I think we could have adults and kids in the same workshop.
 - A few DIYers were interested in diving into more complex repairs. I have intentionally avoided doing complex repairs for the workshop because it takes a lot of time and focus. Maybe we can have a separate workshop for more complex repairs only for people more comfortable with making repairs themselves.
 
-The point we want to drive home is that a lot of repairs are often much easier than people think. Some basic knowledge about how our gadgets work can save us a lot of headaches and making those simple repairs can save time, money, and precious resources.
+<span class="bg-orange-100">The point we want to drive home is that a lot of repairs are often much easier than people think. Some basic knowledge about how our gadgets work can save us a lot of headaches and making those simple repairs can save time, money, and precious resources.</span>
 
 If you have any thoughts or wish to join a future workshop,
 email me at
