@@ -11,7 +11,7 @@ I got my hands dirty with a lot of things before getting into software full-time
 I am still exploring projects in multiple directions, few of which are
 
 1. Electronics repair
-  * I used to conduct an electronics repair workshop as a part of local citizen's initiative. Recently did our first online version of that workshop.
+  * I used to conduct an electronics repair workshop as a part of local citizen's initiative. Recently did our [first online version of that workshop](https://shreshth.dev/repair-workshop-online-1/).
 2. Digital nomading in India
 3. Rebooting IndiaOutside / MyBigRoute
 4. E-commerce for small businesses
