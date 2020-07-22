@@ -71,4 +71,4 @@ If you have any thoughts or wish to join a future workshop,
 email me at
 <a target="_blank" href="mailto:shreshthmohan@hey.com">send me an email</a> or shoot a direct message on <a class="" href="https://twitter.com/shreshthmohan">Twitter</a>.
 
-<!-- Ask people to comment while someone else is talking and we discuss that after they're done. "Don't interrupt, but share" We take it up if enough people think it's interesting. -->
+<!-- Ask people to comment while someone else is talking and we discuss that after they're done. "Don't interrupt, but share" We take it up if enough people think it's interesting.. -->
