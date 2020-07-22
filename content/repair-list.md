@@ -12,4 +12,4 @@ draft: false
 3. Multiple MacBook chargers. (Opened the power brick, cut the frayed ends of the cable and re-soldered)
 4. T’s Electric Kettle (I guided S’s son while he fixed it. Was a loose contact and malfunctioning thermostat mechanism)
 5. O’s Braun Epilator (23 years old! We simply opened it up and cleaned it.)
-6. Girlfriend’s Fujifilm Instant Camera (cleaned battery contacts, she was gonna throw it buy a new one! Saved about 8000 rupees!)
+6. Ex-Girlfriend’s Fujifilm Instant Camera (cleaned battery contacts, she was gonna throw it buy a new one! Saved about 8000 rupees!)
