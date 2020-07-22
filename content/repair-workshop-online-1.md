@@ -40,7 +40,7 @@ Varsha didn’t even join the call and was initially not confident about opening
 
 ## The Zoom Call
 
-As should have been obvious to me earlier we didn't do much fixing during the actual video call for the workshop. Before we jumped into 'fixing' things we briefly talked about a few things.
+As should have been obvious to me earlier we didn't do much fixing during the actual video call for the workshop. Before we jumped into 'fixing' things we briefly talked about a [few things](https://shreshth.dev/common-precautions-easy-repairs/).
 
 - Common precautions anyone could follow to avoid repairs and make the devices last longer. For example, if we turned on the switch after plugging in the device, that would increase the life of the device.
 - Some easy repairs that could be made without tools or with very basic tools. Like, a lot of defunct battery-powered devices start working after you just clean the battery contacts.
