@@ -17,7 +17,7 @@ I am still exploring projects in multiple directions, few of which are
 4. E-commerce for small businesses
   * I have a few freelance gigs for people wanting to setup online stores for their businesses. WooCommerce, Shopify mostly. One interesting thing I found was that GetMeAShop (Times Internet) was bought up by Instamojo. One of my potential clients is very happy with Instamojo, but not so much with the new stores feature they launched hurriedly after the acquisition.
 5. Education
-  * I teach a niece and nephew how to write code for the web.
+  * I teach a niece and a nephew how to write code for the web.
 
 This website is an attempt to share and record my learnings as I try to fend for myself. Though my recent experience has been in software, I won't be writing much about software or programming.
 
