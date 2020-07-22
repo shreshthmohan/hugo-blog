@@ -8,7 +8,7 @@ A few days back I organized an electronics repair workshop for fellow members of
 
 ## What are we try to achieve?
 
-What I have often seen is that people tend to throw away devices that can be easily repaired. Partly because they can't figure out why that piece of technology stopped working and partly because it has become so easy to buy a replacement with a click of a button. I saved a friend about ₹8000 by cleaning the battery contacts of her instant camera. Before she knew that I did simple repairs, she was planning to trash the seemingly broken camera and buy a new one!
+What I have often seen is that people tend to throw away devices that can be easily repaired. Partly because they can't figure out why that piece of technology stopped working and partly because it has become so easy to buy a replacement with a click of a button. I saved a friend about ₹8000 (~$100) by cleaning the battery contacts of her instant camera. Before she knew that I did simple repairs, she was planning to trash the seemingly broken camera and buy a new one!
 
 I have seen a lot of other people do this and it bothers me. So this is simply an attempt to fix that.
 
