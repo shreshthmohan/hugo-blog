@@ -1,5 +1,5 @@
 ---
-title: "Common Precautions and Easy Repairs"
+title: "🌱 Common Precautions and Easy Repairs"
 date: 2020-07-20T05:44:57+05:30
 draft: false
 ---
