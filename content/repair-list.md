@@ -3,7 +3,7 @@ title: "🌱 A list of repairs"
 date: 2020-07-22T13:03:14+05:30
 draft: false
 tags:
-- repair
+- Repair
 ---
 
 
