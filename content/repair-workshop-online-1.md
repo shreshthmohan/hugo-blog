@@ -4,9 +4,9 @@ date: 2020-07-21T07:09:14+05:30
 draft: false
 ---
 
-A few days back I organized an electronics repair workshop for fellow members of <span class="text-black">Beautiful Bengaluru</span>. I was in doubt about the value of running an online version of a workshop that's usually done offline. But desperate times call for desperate measures.
+A few days back I organized an electronics repair workshop for fellow members of <span class="text-black dark:text-white">Beautiful Bengaluru</span>. I was in doubt about the value of running an online version of a workshop that's usually done offline. But desperate times call for desperate measures.
 
-## What are we try to achieve?
+## What are we trying to achieve?
 
 What I have often seen is that people tend to throw away devices that can be easily repaired. Partly because they can't figure out why that piece of technology stopped working and partly because it has become so easy to buy a replacement with a click of a button. I saved a friend about ₹8000 (~$100) by cleaning the battery contacts of her instant camera. Before she knew that I did simple repairs, she was planning to trash the seemingly broken camera and buy a new one!
 
@@ -36,7 +36,7 @@ So I asked questions on a case-by-case basis before the workshop in the WhatsApp
 
 A few people attempted to fix their stuff, before the workshop even started, via the WhatsApp group. I thought that was great!
 
-Varsha didn’t even join the call and was initially not confident about opening up her broken Philips Home Theatre system. <span class="text-black">She thought she didn’t have enough tools to open it up, but ended up opening it up on her own using her cycle repair toolkit!</span>
+Varsha didn’t even join the call and was initially not confident about opening up her broken Philips Home Theatre system. <span class="text-black dark:text-white">She thought she didn’t have enough tools to open it up, but ended up opening it up on her own using her cycle repair toolkit!</span>
 
 ## The Zoom Call
 
@@ -65,7 +65,7 @@ After we had walked through all of the broken items we talked about planned obso
 - A few people wanted us to organize the workshop for kids, mostly teenagers. I think we could have adults and kids in the same workshop.
 - A few DIYers were interested in diving into more complex repairs. I have intentionally avoided doing complex repairs for the workshop because it takes a lot of time and focus. Maybe we can have a separate workshop for more complex repairs only for people more comfortable with making repairs themselves.
 
-<span class="bg-orange-100">The point we want to drive home is that a lot of repairs are often much easier than people think. Some basic knowledge about how our gadgets work can save us a lot of headaches and making those simple repairs can save time, money, and precious resources.</span>
+<span class="bg-yellow-100 dark:bg-gray-700">The point we want to drive home is that a lot of repairs are often much easier than people think. Some basic knowledge about how our gadgets work can save us a lot of headaches and making those simple repairs can save time, money, and precious resources.</span>
 
 If you have any thoughts or wish to join a future workshop,
 email me at
