@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://shreshth.dev/css/theme.css">
+
+    <title>Document</title>
+  </head>
+  <body class="bg-yellow-50">
+    <div class="px-4 sm:px-6 lg:px-8 py-16">
+      <div class="mx-auto">
+        <h1
+          class="text-4xl text-center font-bold tracking-tight text-yellow-500 mb-16"
+        >
+          <span class="text-shadow-sm">Bulls and Cows</span>
+        </h1>
+
+        <div class="sm:w-1/6 mx-auto">
+          <div
+            class="text-xl text-gray-600 font-bold text-center mb-4"
+            id="past-guesses"
+          ></div>
+          <form class="flex flex-col" id="guess">
+            <div class="flex justify-between">
+              <input
+                class="appearance-none w-full font-bold px-2 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-200 focus:outline-none hover:shadow-inner focus:shadow-inner focus:ring-yellow-500 focus:border-yellow-500 sm:text-xl text-center"
+                id="guess-input"
+                type="text"
+                placeholder="••••"
+              />
+              <!-- · -->
+              <!-- • -->
+              <!-- <input
+                size="1"
+                class="appearance-none px-2 py-1 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-lg text-center"
+                id="guess-input"
+                type="text"
+              />
+              <input
+                size="1"
+                class="appearance-none px-2 py-1 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-lg text-center"
+                id="guess-input"
+                type="text"
+              />
+              <input
+                size="1"
+                class="appearance-none px-2 py-1 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-lg text-center"
+                id="guess-input"
+                type="text"
+              /> -->
+            </div>
+            <button
+              class="mt-2 w-full flex justify-center py-2 px-4 border border-transparent rounded-full shadow-lg hover:shadow-md text-xl font-bold text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+            >
+              Guess
+            </button>
+          </form>
+          <button
+            class="hidden w-full mt-2 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+            id="play-another"
+          >
+            Play another round!
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      let fourBulls = generateRandomNumber();
+
+      // const DEFAULT_GUESS_LENGTH = 4;
+
+      // generate random numbers with unique digits
+      function generateRandomNumber(digits = 4) {
+        // digits: cannot be more than 10
+
+        // between 0 and 1 (can't ne one)
+        // between 0 and 9 (both inclusive)
+        if (digits > 10) {
+          // TODO validation at input also
+          return;
+        }
+        const numArr = [];
+        numArr.push(Math.floor(Math.random() * 10));
+
+        while (numArr.length < digits) {
+          let newNum = Math.floor(Math.random() * 10);
+          while (numArr.indexOf(newNum) > -1) {
+            newNum = Math.floor(Math.random() * 10);
+          }
+          numArr.push(newNum);
+        }
+        return numArr.join("");
+      }
+
+      let correctGuess = false;
+
+      const playAnother = document.getElementById("play-another");
+      const pastGuesses = document.getElementById("past-guesses");
+
+      playAnother.addEventListener("click", function (event) {
+        while (pastGuesses.firstChild) {
+          pastGuesses.removeChild(pastGuesses.lastChild);
+          correctGuess = false;
+          playAnother.classList.toggle("hidden");
+          // generate new fourBulls
+          fourBulls = generateRandomNumber();
+          // displayFourBulls();
+        }
+      });
+
+      function displayFourBulls() {
+        // 1. remove if one exists
+        let fourBullsEl = document.getElementById("four-bulls");
+        if (fourBullsEl) {
+          fourBullsEl.remove();
+        }
+        // 2. Add new one
+        const fourBullsText = document.createTextNode(
+          "Correct guess: " + fourBulls
+        );
+        fourBullsEl = document.createElement("div");
+        fourBullsEl.setAttribute("id", "four-bulls");
+        fourBullsEl.append(fourBullsText);
+        pastGuesses.before(fourBullsEl);
+      }
+
+      // displayFourBulls();
+      const guessForm = document.getElementById("guess");
+      const guessInput = document.getElementById("guess-input");
+
+      const fourDigitNumRegex = /\d{4}/;
+      guessForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (fourDigitNumRegex.test(guessInput.value)) {
+          // 👆🏽 simple validation
+          const guessCheckResult = checkGuess(fourBulls, guessInput.value);
+          if (guessCheckResult.bulls === 4) {
+            correctGuess = true;
+            playAnother.classList.toggle("hidden");
+          }
+
+          const bullsAndCowsStr = genBullsAndCowsString(guessCheckResult);
+          const guessText = document.createTextNode(
+            // guessInput.value
+            `${guessInput.value} · ${bullsAndCowsStr}`
+          );
+          const guessElement = document.createElement("div");
+          guessElement.appendChild(guessText);
+          pastGuesses.append(guessElement);
+          guessInput.value = "";
+        }
+      });
+
+      function checkGuess(targetGuess, currentGuess) {
+        // both arguments should be pre-validated
+        // 1. same length
+        // 2. same chosen format (number vs number ...)
+
+        let bulls = 0;
+        let cows = 0;
+        for (const i in currentGuess) {
+          if (targetGuess[i] === currentGuess[i]) {
+            bulls++;
+          } else if (targetGuess.indexOf(currentGuess[i]) > -1) {
+            cows++;
+          }
+        }
+        return { bulls, cows };
+      }
+
+      function genBullsAndCowsString(bullsAndCowsObj) {
+        return `${bullsAndCowsObj.bulls}B ${bullsAndCowsObj.cows}C`;
+      }
+      // TODOs
+      // dark theme
+      // Tailwind Build setup?
+      // Win message
+      //
+    </script>
+  </body>
+</html>
