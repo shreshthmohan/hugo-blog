@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="/css/theme.css" />
+
+    <title>Random Cards</title>
+  </head>
+  <body
+    class="font-serif justify-center items-center h-screen dark:bg-gray-800 dark:text-gray-300 text-gray-800"
+  >
+    <button
+      id="get-random-quote"
+      class="font-serif dark:bg-gray-600 dark:text-gray-200 rounded-sm px-2 py-1 dark:hover:bg-gray-700 text-white transition-all duration-1000 bg-gradient-to-r to-green-500 from-green-600 hover:from-blue-400 hover:to-blue-600"
+    >
+      Random Quote
+    </button>
+    <div class="absolute inline text-xs right-0 md:pr-3 md:pt-0">
+      <label for="dark-mode-switch">Dark Mode</label>
+      <input id="dark-mode-switch" type="checkbox" />
+    </div>
+    <div class="flex justify-center items-center h-screen">
+      <div class="">
+        <div class="rounded-lg">
+          <div class="flex items-stretch">
+            <div
+              class="w-2 bg-gradient-to-b from-green-500 to-green-200 dark:from-green-500 dark:to-green-900 flex-shrink-0"
+            ></div>
+            <div
+              class="max-w-prose p-4 md:px-16 md:py-12 text-2xl flex relative leading-relaxed"
+              id="quote"
+            >
+              You are one person in a game with seven billion other people and
+              infinite moving parts. The accidental impact of actions outside of
+              your control can be more consequential than the ones you
+              consciously take.
+            </div>
+          </div>
+          <div class="flex items-stretch justify-end">
+            <div class="text-lg block text-gray-500 pr-4">
+              <div id="author">Morgan Housel</div>
+              <div>
+                <a
+                  class="text-blue-400 hover:text-blue-600 underline"
+                  href="https://amzn.to/3sW3qFH"
+                  target="_blank"
+                  id="book"
+                  >The Psychology of Money</a
+                >
+              </div>
+            </div>
+            <div
+              class="w-2 bg-gradient-to-b from-blue-200 to-blue-500 dark:from-blue-500 dark:to-blue-900 flex-shrink-0"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/js/random-card-data.js"></script>
+  <script>
+    // data
+    // {
+    //     quote:
+    //       "You are one person in a game with seven billion other people and infinite moving parts. The accidental impact of actions outdside of your control can be more consequential than the ones you consciously take.",
+    //     book: "The Psychology of Money",
+    //     author: "Morgan Housel",
+    //     link: "https://amzn.to/3sW3qFH",
+    //     page: 28,
+    //   }
+
+    const quoteEl = document.getElementById("quote");
+    const authorEl = document.getElementById("author");
+    const bookNameEl = document.getElementById("book");
+
+    let randomNumber = 0;
+
+    function generateRandomNumber(max) {
+      return Math.floor(Math.random() * max);
+    }
+    function generateDifferentRandomNumber() {
+      let newRandomNumber = generateRandomNumber(data.length);
+      while (newRandomNumber === randomNumber) {
+        newRandomNumber = generateRandomNumber(data.length);
+      }
+      return newRandomNumber;
+    }
+
+    function applyRandomQuoteToDocument() {
+      randomNumber = generateDifferentRandomNumber();
+      const quoteText = document.createTextNode(data[randomNumber].quote);
+      const authorText = document.createTextNode(data[randomNumber].author);
+      const bookNameText = document.createTextNode(data[randomNumber].book);
+      const bookLink = data[randomNumber].link;
+
+      quoteEl.removeChild(quoteEl.lastChild);
+      quoteEl.appendChild(quoteText);
+
+      authorEl.removeChild(authorEl.lastChild);
+      authorEl.appendChild(authorText);
+
+      bookNameEl.removeChild(bookNameEl.lastChild);
+      bookNameEl.appendChild(bookNameText);
+
+      bookNameEl.setAttribute("href", bookLink);
+    }
+
+    applyRandomQuoteToDocument();
+
+    const getRandomQuoteButton = document.getElementById("get-random-quote");
+    getRandomQuoteButton.addEventListener("click", applyRandomQuoteToDocument);
+  </script>
+  <script
+    defer=""
+    language="javascript"
+    type="text/javascript"
+    src="/js/dark.js"
+  ></script>
+</html>
