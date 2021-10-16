@@ -4,7 +4,8 @@ const dimensions = {
   seriesField: "chart_desc",
   xField: "date",
   yField: "readers",
-  colorField: "group",
+  // colorField: "group",
+  colorField: "chart_desc",
 };
 
 // Chart Options
@@ -155,18 +156,25 @@ d3.csv("/ridgeline.fun/data.csv").then((data) => {
 
   const area = d3
     .area()
-    // .curve(d3.curveBasis)
+    .curve(d3.curveBasis)
     .x((d) => xScale(parseDate(d[xField])))
     .y1((d) => yScale(d[yField]))
-    .y0(yScale(0));
+    .y0(yScale(0) + categoryScale.bandwidth() + 20);
+
+  const numberOfColors = colorDomain.length;
+  const colorRange = d3.quantize(d3.interpolateViridis, numberOfColors);
+
+  // svg.attr('')
+
+  svg.style("background", d3.rgb(colorRange[0]).darker(0.2));
 
   const fillColorScale = d3
     .scaleOrdinal()
     // .range(d3.schemeSpectral[9])
     // .range(d3.schemeCategory10)
     // .range(d3.schemeAccent)
-    .range(d3.schemeTableau10)
-
+    // .range(d3.schemeTableau10)
+    .range(colorRange)
     .domain(colorDomain);
   seriesGroup
     .append("path")
@@ -183,7 +191,7 @@ d3.csv("/ridgeline.fun/data.csv").then((data) => {
     .datum((d) => d.values)
     .attr("d", area.lineY1())
     .attr("stroke", (d) => {
-      return d3.rgb(fillColorScale(d[0][colorField])).darker(0.5);
+      return d3.rgb(fillColorScale(d[0][colorField])).darker(0.2);
     });
   // seriesGroup
   //   .append("text")
