@@ -83,7 +83,9 @@ const svgParent = d3.select(svgParentNodeSelector);
 const svg = svgParent
   .append("svg")
   .attr("viewBox", `0 0 ${viewBoxWidth} ${viewBoxHeight}`)
-  .style("background", bgColor);
+  .style("background", bgColor)
+  .attr("width", window.innerWidth)
+  .attr("height", window.innerHeight);
 
 const chartCore = svg
   .append("g")
@@ -160,6 +162,8 @@ d3.csv("/ridgeline.fun/data.csv").then((data) => {
     .x((d) => xScale(parseDate(d[xField])))
     .y1((d) => yScale(d[yField]))
     .y0(yScale(0) + categoryScale.bandwidth() + 20);
+
+  // const colorSchemes =
 
   const numberOfColors = colorDomain.length;
   const colorRange = d3.quantize(d3.interpolateViridis, numberOfColors);
