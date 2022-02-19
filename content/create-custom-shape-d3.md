@@ -41,3 +41,29 @@ To tackle this issue we shall create a custom shape using SVG `<path>` element.
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.1.1/d3.min.js" integrity="sha512-COTaPOlz12cG4fSfcBsxZsjauBAyldqp+8FQUM/dZHm+ts/jR4AFoJhCqxy8K10Jrf3pojfsbq7fAPTb1XaVkg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="/js/d3-custom-shape.js"></script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+  </script>
+
+The known values of this shape are:
+
+<p>
+<li>Radius of the circle: \(r_1\)</li>
+<li>Length of the rectange: \(l\)</li>
+<li>Width of the rectange: \(w\)</li>
+</p>
+
+Since we want to use d3.lineRadial() to generate this shape, we need to convert cartesian coordinates for the points of interest on this shape to polar coordinates.
+
+The values we need to calculate are:
+
+- The central angle subtended by a chord of length w on the circle with radius r₁: θ (theta)
+- Radius of a circle concentric to circle 1, whose circumference coincindes with to points of the rectangle: r₂
+- The central angle subtended by a chord of length w on the circle with radius r₂: ɸ (phi)
+
+<p>
+  When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+  \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
+</p>
